@@ -1,13 +1,49 @@
 {
-  "name": "worklog",
+  "name": "monorepo",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Turborepo + Nuxt 3 монорепозиторий с Vue 3 компонентами",
+  "keywords": [
+    "turborepo",
+    "monorepo",
+    "nuxt3",
+    "vue3",
+    "typescript",
+    "workspaces"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/monorepo.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.5.2"
+  "bugs": {
+    "url": "https://github.com/yourusername/monorepo/issues"
+  },
+  "homepage": "https://github.com/yourusername/monorepo#readme",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,vue,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,vue,json,md}\"",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-turbo": "^2.0.0",
+    "prettier": "^3.2.0",
+    "turbo": "^2.0.0"
+  },
+  "packageManager": "npm@10.0.0",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=10.0.0"
+  }
 }

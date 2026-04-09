@@ -1,0 +1,14 @@
+{
+  "name": "@worklog/shared",
+  "private": true,
+  "version": "0.0.0",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.0.0"
+  }
+}
